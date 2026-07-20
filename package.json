@@ -5,6 +5,8 @@
   "license": "MIT",
   "private": true,
   "type": "module",
+  "private": true,
+"packageManager": "pnpm@10.28.2",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
     "deploy": "pnpm run deploy:database && pnpm run deploy:app",
