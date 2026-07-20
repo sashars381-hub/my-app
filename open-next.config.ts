@@ -1,4 +1,11 @@
-// default open-next.config.ts file created by @opennextjs/cloudflare
-import { defineCloudflareConfig } from '@opennextjs/cloudflare/config'
+import {
+  defineCloudflareConfig,
+  type OpenNextConfig,
+} from '@opennextjs/cloudflare'
 
-export default defineCloudflareConfig({})
+export default {
+  ...defineCloudflareConfig(),
+
+  // Не даём OpenNext ошибочно запускать bun run build
+  buildCommand: 'pnpm run build',
+} satisfies OpenNextConfig
